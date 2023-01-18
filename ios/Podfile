@@ -1,0 +1,79 @@
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+
+platform :ios, '11.0'
+
+target 'healthbridge' do
+  # use_frameworks!
+  config = use_native_modules!
+
+  use_react_native!(
+    :path => config[:reactNativePath],
+    # to enable hermes on iOS, change `false` to `true` and then install pods
+    :hermes_enabled => false
+  )
+  permissions_path = '../node_modules/react-native-permissions/ios'
+  pod 'Firebase/Analytics'
+  pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
+
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+  pod 'RNFBAuth', :path => '../node_modules/@react-native-firebase/auth'
+
+  pod 'RNFBFirestore', :path => '../node_modules/@react-native-firebase/firestore'
+
+  pod 'RNDateTimePicker', :path => '../node_modules/@react-native-community/datetimepicker'
+
+
+  pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-async-storage/async-storage'
+
+
+  pod 'react-native-agora', :path => '../node_modules/react-native-agora'
+
+
+
+
+  pod 'stripe-react-native', :path => '../node_modules/@stripe/stripe-react-native'
+
+
+
+  pod 'react-native-document-picker', :path => '../node_modules/react-native-document-picker'
+
+  pod 'rn-fetch-blob', :path => '../node_modules/rn-fetch-blob'
+  # pod 'VirgilCrypto', '~> 5.3.0'
+  # pod 'VirgilCryptoFoundation', '~> 0.12.0'
+  # pod 'VirgilCryptoPythia', '~> 0.12.0'
+
+  pod 'RNSVG', :path => '../node_modules/react-native-svg'
+
+  pod 'RNFBFunctions', :path => '../node_modules/@react-native-firebase/functions'
+
+  pod 'react-native-version-check', :path => '../node_modules/react-native-version-check'
+  pod 'Permission-Camera', :path => "#{permissions_path}/Camera"
+  pod 'Permission-Microphone', :path => "#{permissions_path}/Microphone"
+  pod 'RNPermissions', :path => '../node_modules/react-native-permissions'
+  pod 'react-native-image-picker', :path => '../node_modules/react-native-image-picker'
+
+  target 'healthbridgeTests' do
+    inherit! :complete
+    # Pods for testing
+  end
+
+  # Enables Flipper.
+  #
+  # Note that if you have use_frameworks! enabled, Flipper will not work and
+  # you should disable the next line.
+  use_flipper!()
+
+  # post_install do |installer|
+  #   react_native_post_install(installer)
+  # end
+  post_install do |installer|
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '11.0'
+      end
+    end
+  end
+  
+end

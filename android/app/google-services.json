@@ -1,0 +1,70 @@
+{
+  "project_info": {
+    "project_number": "13091460516",
+    "project_id": "healthbridgeprod",
+    "storage_bucket": "healthbridgeprod.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:13091460516:android:fab00223b724c30d5cdd31",
+        "android_client_info": {
+          "package_name": "com.healthbridge.healthdoc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "13091460516-bcs906hg6d0u07gj298l32fgfmtk9q2c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.healthbridge.healthdoc",
+            "certificate_hash": "10d2f856c0d7bfa3defb4b72a64975a311787f25"
+          }
+        },
+        {
+          "client_id": "13091460516-dka13i13ct3o78eqsutcojcvm5cn7uid.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.healthbridge.healthdoc",
+            "certificate_hash": "4050188f30f3422256a46f696c0a1c794140d125"
+          }
+        },
+        {
+          "client_id": "13091460516-mofl0e8a8b0r8v35ts7741bkvpgvbn12.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.healthbridge.healthdoc",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "13091460516-pecb0gjnfg86opligceadi73m6r8m99h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnsigd4ZJS-iJmFOZYpY1Rb9asx5AS7Kk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "13091460516-pecb0gjnfg86opligceadi73m6r8m99h.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "13091460516-jbbf9am5vj3827f7uuechpl1sakd3mkn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.healthbridge.healthdoc"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
